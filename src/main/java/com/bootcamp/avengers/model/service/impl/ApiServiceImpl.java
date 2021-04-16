@@ -22,9 +22,9 @@ public class ApiServiceImpl implements IApiService {
     }
 
     @Override
-    public Completable savePreference(Preference category) {
+    public Completable savePreference(Preference preference) {
         return Completable.create(subscriber -> {
-            preferenceRepository.save(category);
+            preferenceRepository.save(preference);
             subscriber.onComplete();
         });
     }
