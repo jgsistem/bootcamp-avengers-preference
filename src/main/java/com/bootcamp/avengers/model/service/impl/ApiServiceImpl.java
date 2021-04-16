@@ -33,4 +33,9 @@ public class ApiServiceImpl implements IApiService {
     public Observable<List<Preference>> getAllPreferencesByCategory(Long idCategory) {
         return Observable.fromArray(preferenceRepository.findAllByCategory(idCategory));
     }
+
+    @Override
+    public Observable<List<Preference>> getAllPreferencesByDni(String dni) {
+        return Observable.fromArray(preferenceRepository.findAllByDni(dni));
+    }
 }

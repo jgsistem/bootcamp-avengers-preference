@@ -13,4 +13,6 @@ public interface IApiService {
     Completable savePreference(Preference preference);
     
     Observable<List<Preference>> getAllPreferencesByCategory(Long idCategory);
+
+    Observable<List<Preference>> getAllPreferencesByDni(String dni);
 }

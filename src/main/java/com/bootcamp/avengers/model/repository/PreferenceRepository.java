@@ -11,4 +11,7 @@ import java.util.List;
 public interface PreferenceRepository extends JpaRepository<Preference, Long> {
     @Query("select a from Preference a where a.idCategory = ?1")
     List<Preference> findAllByCategory(Long idCategory);
+
+    @Query("select a from Preference a where a.dni = ?1")
+    List<Preference> findAllByDni(String dni);
 }

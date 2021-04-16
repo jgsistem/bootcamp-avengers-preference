@@ -38,4 +38,10 @@ public class ApiController {
         return apiService.getAllPreferencesByCategory(idCategory)
                 .subscribeOn(Schedulers.io());
     }
+
+    @GetMapping("/allByDni/{dni}")
+    public Observable<List<Preference>> getAllPreferencesByDni(@PathVariable String dni) {
+        return apiService.getAllPreferencesByDni(dni)
+                .subscribeOn(Schedulers.io());
+    }
 }
