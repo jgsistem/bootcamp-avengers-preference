@@ -33,8 +33,8 @@ public class ApiController {
                 .subscribeOn(Schedulers.io());
     }
 
-    @GetMapping("/allByDiscount")
-    public Observable<List<Preference>> getAllPreferencesByCategory(Long idCategory) {
+    @GetMapping("/allByCategory/{idCategory}")
+    public Observable<List<Preference>> getAllPreferencesByCategory(@PathVariable Long idCategory) {
         return apiService.getAllPreferencesByCategory(idCategory)
                 .subscribeOn(Schedulers.io());
     }
