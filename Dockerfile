@@ -1,6 +1,6 @@
 #JAR
 FROM openjdk:8
 WORKDIR /
-ADD target/project-reto.jar project-reto.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "project-reto.jar"]
+ADD target/bootcamp-avengers-preference.jar bootcamp-avengers-preference.jar
+EXPOSE 8083
+ENTRYPOINT ["java", "-jar", "bootcamp-avengers-preference.jar"]
